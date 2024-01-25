@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Library Website</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding-top: 56px;
+            /* Adjust based on your navbar height */
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #343a40;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+
+        .navbar-dark .navbar-toggler-icon {
+            background-color: #ffffff;
+        }
+
+        /* Search Bar */
+        #search-bar {
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            position: inherit;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Social Media Icons */
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            padding-top: 10px;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .social-icons a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        /* Search Section */
+        #search-section {
+            background-image: url('background.jpg');
+            /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            /* Adjust the padding based on your design */
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        #search-bar {
+            margin-top: 20px;
+        }
+
+        #search-bar input {
+            width: 600px;
+            margin-left: 20%;
+        }
+
+        #content-section
+        {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="#"><b style="font-weight: bold; font-size: larger;">LMS</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-home"></i>  Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Browse
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <!-- Add dropdown items here -->
+                        <a class="dropdown-item" href="#">By Type</a>
+                        <a class="dropdown-item" href="#">By Subject</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">All Categories</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="scrollToSearch()"><i class="fab fa-sistrix"></i> Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="books.html"><i class="fas fa-book"></i> Books</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-globe"></i> Language
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <!-- Add dropdown items here -->
+                        <a class="dropdown-item" href="#">English</a>
+                        <a class="dropdown-item" href="#">हिंदी</a>
+                        <a class="dropdown-item" href="#">ଓଡିଆ</a>
+                        <a class="dropdown-item" href="#">All Languages</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logIn.html">
+                        <i class="fas fa-user"></i>  Log In</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="search-section">
+        <div class="container">
+            <div id="search-bar">
+                <!-- Content for the search bar goes here -->
+                <form class="form-inline my-2 my-lg-0">
+                    <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search for your new book..." aria-label="Search">
+                    <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fab fa-sistrix"></i>
+                        Search</button>
+                </form>
+            </div>
+        </div>
+    </section>    
+
+<section id="content-section">
+    <div class="container">
+        <div class="row">
+            <!-- Image on the Left -->
+            <div class="col-md-6">
+                <img src="person-reading.jpg" alt="Person Reading in Library" class="img-fluid" height="300" width="500">
+            </div>
+            <!-- Text on the Right -->
+            <div class="col-md-6 text-left">
+                <h2 class="text-center">Welcome to Our Library</h2>
+                <p>
+                    Welcome to our library, a place where stories come to life, and knowledge knows no bounds.
+                    Whether you're seeking a gripping novel, informative research materials, or a quiet space to
+                    read,
+                    you've come to the right place.
+                </p>
+                <p>
+                    Our shelves are filled with a diverse collection of books, catering to all tastes and interests.
+                    Take a moment to explore our virtual shelves, discover new worlds, and embark on literary
+                    adventures.
+                    We invite you to make yourself at home and embrace the joy of reading.
+                </p>
+                <p>
+                    Thank you for choosing our library. We hope your journey with us is filled with inspiration,
+                    discovery, and the simple pleasure of getting lost in a good book.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+                <div class="col text-center">
+                    &copy; 2024 Library Website
+                </div>
+                <div class="col-mt-3 text-center">
+                    <ul class="social-icons">
+                        <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function scrollToSearch() {
+            // Get the position of the search section
+            var searchSection = document.getElementById('search-section');
+            var position = searchSection.offsetTop;
+    
+            // Scroll to the search section with smooth animation
+            window.scrollTo({
+                top: position,
+                behavior: 'smooth'
+            });
+    
+            // Focus on the search input
+            document.getElementById('search-input').focus();
+        }
+    </script>
+</body>
+
+</html>

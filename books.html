@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Library Website</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding-top: 56px;
+            /* Adjust based on your navbar height */
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #343a40;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+
+        .navbar-dark .navbar-toggler-icon {
+            background-color: #ffffff;
+        }
+
+        /* Search Bar */
+        #search-bar {
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            position: inherit;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Social Media Icons */
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            padding-top: 10px;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .social-icons a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        #content-section {
+            margin-top: 30px;
+        }
+
+        #book-display-section {
+            margin-top: 20px;
+        }
+
+        .book-info {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="home.html"><b style="font-weight: bold; font-size: larger;">LMS</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">
+                        <i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Browse
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <!-- Add dropdown items here -->
+                        <a class="dropdown-item" href="#">By Type</a>
+                        <a class="dropdown-item" href="#">By Subject</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">All Categories</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><i class="fas fa-book"></i> Books</a>
+                </li>
+            </ul>
+            <!-- Search Bar -->
+            <form class="form-inline my-2 my-lg-0 ml-auto">
+                <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search for books..."
+                    aria-label="Search">
+                <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i> Search</button>
+            </form>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-globe"></i> Language
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <!-- Add dropdown items here -->
+                        <a class="dropdown-item" href="#">English</a>
+                        <a class="dropdown-item" href="#">हिंदी</a>
+                        <a class="dropdown-item" href="#">ଓଡିଆ</a>
+                        <a class="dropdown-item" href="#">All Languages</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logIn.html">
+                        <i class="fas fa-user"></i> Log In</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Book Display-->
+    <div class="container">
+        <h1 style=" padding-top: 20px; text-align: center; padding-bottom: 20px;">Book Gallery</h1>
+
+        <div class="row">
+            <div class="col-book mb-4" style="width: 20%; padding: 0.5rem;">
+                <div class="card h-100 text-center">
+                    <img src="richdadpoordad.jpg"
+                        class="card-img-top" alt="Book 1"  style=" height: 300px;">
+                    <div class="card-body" style="display: flex !important; align-items: stretch;">
+                        <h5 class="card-title">Rich Dad Poor Dad</h5>
+                        <p class="card-text">Robert T. Kiyosaki</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-book mb-4" style="width: 20%; padding: 0.5rem;">
+                <div class="card h-100 text-center">
+                    <img src="atomichabits.jpg" 
+                    class="card-img-top" alt="Book 2"  style=" height: 300px;">
+                    <div class="card-body" style="display: flex !important; align-items: stretch;">
+                        <h5 class="card-title">Atomic Habits</h5>
+                        <p class="card-text">James Clear</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-book mb-4" style="width: 20%; padding: 0.5rem;">
+                <div class="card h-100 text-center">
+                    <img src="abriefhistory.jpg" 
+                    class="card-img-top" alt="Book 3"  style=" height: 300px;">
+                    <div class="card-body" style="display: flex !important; align-items: stretch;">
+                        <h5 class="card-title">A Brief History Of Time</h5>
+                        <p class="card-text">Stephen Hawking</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-book mb-4" style="width: 20%; padding: 0.5rem;">
+                <div class="card h-100 text-center">
+                    <img src="12Rules.jpg" 
+                    class="card-img-top" alt="Book 4"  style=" height: 300px;">
+                    <div class="card-body d-flex" style="display: flex !important; align-items: stretch;">
+                        <h5 class="card-title">12 Rules For Life</h5>
+                        <p class="card-text">Jordan B. Peterson</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-book mb-4" style="width: 20%; padding: 0.5rem;">
+                <div class="card h-100 text-center">
+                    <img src="godof.jpg" 
+                    class="card-img-top" alt="Book 5"  style=" height: 300px;">
+                    <div class="card-body" style="display: flex !important; align-items: stretch;">
+                        <h5 class="card-title">The God of Small Things</h5>
+                        <p class="card-text">Arundhati Roy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-book mb-4" style="width: 20%; padding: 0.5rem;">
+                <div class="card h-100 text-center">
+                    <img src="thealch.jpg"
+                        class="card-img-top" alt="Book 1"  style=" height: 300px;">
+                    <div class="card-body" style="display: flex !important; align-items: stretch;">
+                        <h5 class="card-title">The Alchemist</h5>
+                        <p class="card-text">Paulo Coelho</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-book mb-4" style="width: 20%; padding: 0.5rem;">
+                <div class="card h-100 text-center">
+                    <img src="greatgatsby.jpg" 
+                    class="card-img-top" alt="Book 2"  style=" height: 300px;">
+                    <div class="card-body" style="display: flex !important; align-items: stretch;">
+                        <h5 class="card-title">The Great Gatsby</h5>
+                        <p class="card-text">F. Scott Fitzgerald</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-book mb-4" style="width: 20%; padding: 0.5rem;">
+                <div class="card h-100 text-center">
+                    <img src="killamocking.jpg" 
+                    class="card-img-top" alt="Book 3"  style=" height: 300px;">
+                    <div class="card-body" style="display: flex !important; align-items: stretch;">
+                        <h5 class="card-title">A Brief History Of Time</h5>
+                        <p class="card-text">Harper Lee</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-book mb-4" style="width: 20%; padding: 0.5rem;">
+                <div class="card h-100 text-center">
+                    <img src="adventures.jpg" 
+                    class="card-img-top" alt="Book 4"  style=" height: 300px;">
+                    <div class="card-body d-flex" style="display: flex !important; align-items: stretch;">
+                        <h5 class="card-title">The Adventures of Sherlock Holmes</h5>
+                        <p class="card-text">Arthur Conan Doyle</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-book mb-4" style="width: 20%; padding: 0.5rem;">
+                <div class="card h-100 text-center">
+                    <img src="coldblood.jpg" 
+                    class="card-img-top" alt="Book 5"  style=" height: 300px;">
+                    <div class="card-body" style="display: flex !important; align-items: stretch;">
+                        <h5 class="card-title">In Cold Blood</h5>
+                        <p class="card-text">Truman Capote</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="col text-center">
+                &copy; 2024 Library Website
+            </div>
+            <div class="col-mt-3 text-center">
+                <ul class="social-icons">
+                    <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // Function to handle search
+        $("#search-input").on("input", function () {
+            var searchQuery = $(this).val().toLowerCase();
+
+            // Hide all books
+            $(".col-book").hide();
+
+            // Show only books that match the search query
+            $(".col-book").each(function () {
+                var bookTitle = $(this).find(".card-title").text().toLowerCase();
+                var authorName = $(this).find(".card-text").text().toLowerCase();
+
+                if (bookTitle.includes(searchQuery) || authorName.includes(searchQuery)) {
+                    $(this).show();
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+
+</html>

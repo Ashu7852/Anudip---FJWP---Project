@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Library Website</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding-top: 56px;
+            /* Adjust based on your navbar height */
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #343a40;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+
+        .navbar-dark .navbar-toggler-icon {
+            background-color: #ffffff;
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .signup-container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            border: 1px solid #ced4da;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="home.html"><b style="font-weight: bold; font-size: larger;">LMS</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">
+                        <i class="fas fa-home"></i> Home</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="logIn.html">
+                        <i class="fas fa-user"></i> Log In</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container signup-container">
+        <h2 class="text-center">Sign Up</h2>
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <div class="form-group">
+                <label>Gender:</label>
+                <div class="d-flex">
+                    <div class="form-check mr-3">
+                        <input class="form-check-input" type="radio" name="gender" id="male" value="male" checked>
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check mr-3">
+                        <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="other" value="other">
+                        <label class="form-check-label" for="other">Other</label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+            <hr>
+            <p class="text-center">Already have an account? <a href="logIn.html">Click Here!</a></p>
+
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript for form validation -->
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function (event) {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+
+            // Basic validation
+            if (name.trim() === '' || email.trim() === '' || password.trim() === '' || confirmPassword.trim() === '' || !gender) {
+                alert('All fields are required');
+                event.preventDefault();
+                return;
+            }
+
+            // Password confirmation
+            if (password !== confirmPassword) {
+                alert('Passwords do not match');
+                event.preventDefault();
+            }
+            else {
+                // If passwords match, show registration successful alert
+                alert("Registration Successful!");
+            }
+
+
+
+        });
+    </script>
+</body>
+
+</html>
